@@ -2,17 +2,102 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: orange;
+    background-color: #ffa500;
+    color: #481A00;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
 }
 
 .title {
     text-align: center;
     text-wrap: balance;
     font-size: 4rem;
-    margin: 0 1em;
+    margin: 0.3em 1em;
     letter-spacing: 3px;
     line-height: 1.2;
+    font-weight: 700;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr minmax(150px, 300px) minmax(250px, 500px) 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(10px, 1fr));
+    grid-template-areas: 
+    ". lists tasks ."
+    ". timer timer .";
+    margin-bottom: 3em;
+}
 
+.lists {
+    grid-area: lists;
+}
+
+.lists-title {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.lists-names {
+    padding-left: 1em;
+    font-size: 1.4rem;
+    list-style: circle;
+    letter-spacing: 1px;
+}
+
+.list-name {
+    cursor: pointer;
+}
+
+.list-name:hover {
+    opacity: 0.7;
+}
+
+.active-list {
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+}
+
+.new-list {
+    order: 2;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid #000000;
+    font-size: 1rem;
+    outline: none;
+    transition: border-bottom 300ms ease-out;
+}
+
+.new-list:focus {
+    border-bottom: 3px solid #000000;
+}
+
+.new-list:focus::placeholder {
+    opacity: 0.5;
+}
+
+.btn-add-list {
+    background-color: inherit;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 0.5em;
+    transition: opacity 300ms ease-in;
+}
+
+.btn-add-list:hover {
+    opacity: 0.7;
+}
+
+.tasks {
+    grid-area: tasks;
+}
+
+.timer {
+    grid-area: timer;
+}
 

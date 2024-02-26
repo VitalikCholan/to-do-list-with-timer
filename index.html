@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do list with timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/94d4b51bbe.js" crossorigin="anonymous"></script>
 </head>
@@ -25,13 +28,13 @@
 
                 <form action="">
                     <input type="text" class="new-list" name="new-list" id="new-list" placeholder="Write new list..." aria-label="Write new list for tasks">
-                    <button class="btn-add-list" aria-label="Add new list">+</button>
+                    <button class="btn-add-list" aria-label="Add new list"><i class="fa-solid fa-plus"></i></button>
                 </form>
             </section>
 
             <section class="tasks">
                 <div class="tasks-header">
-                    <h2 class="tasks-title">Work</h2>
+                    <h2 class="tasks-title">Daily routine</h2>
                     <p class="task-count">4 tasks remaining</p>
                 </div>
 
@@ -60,7 +63,7 @@
 
                     <div class="new-task-create">
                         <input type="text" class="new-task" name="new-task" id="new-task" placeholder="Write new task..." aria-label="Write new task">
-                        <button class="btn-add-task" aria-label="Add new task">+</button>
+                        <button class="btn-add-task" aria-label="Add new task"><i class="fa-solid fa-plus"></i></button>
                     </div>
 
                     <div class="delete-tasks">
