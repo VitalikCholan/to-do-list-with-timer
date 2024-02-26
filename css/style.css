@@ -12,7 +12,7 @@ body {
     text-align: center;
     text-wrap: balance;
     font-size: 4rem;
-    margin: 0.3em 1em;
+    margin: 0.5em 1em;
     letter-spacing: 3px;
     line-height: 1.2;
     font-weight: 700;
@@ -95,6 +95,30 @@ form {
 
 .tasks {
     grid-area: tasks;
+}
+
+.tasks-header {
+    background-color: #e27c00;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5em;
+}
+
+.tasks-title {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.task-count {
+    align-self: center;
+    font-size: 1.2rem;
+}
+
+.tasks-body {
+    background-color: #ffc71b;
+    padding: 2em;
 }
 
 .timer {

@@ -27,7 +27,7 @@
                 </ul>
 
                 <form action="">
-                    <input type="text" class="new-list" name="new-list" id="new-list" placeholder="Write new list..." aria-label="Write new list for tasks">
+                    <input type="text" class="new-list" name="new-list" id="new-list" placeholder="New list..." aria-label="Write new list for tasks">
                     <button class="btn-add-list" aria-label="Add new list"><i class="fa-solid fa-plus"></i></button>
                 </form>
             </section>
@@ -41,28 +41,27 @@
                 <div class="tasks-body">
                     <div class="tasks-names">
                         <div class="task">
-                            <input type="checkbox" name="task-1" id="task-1">
-                            <label for="task-1">Eat</label>
+                            <input type="checkbox" class="checkbox" name="task-1" id="task-1">
+                            <label for="task-1" class="custom-checkbox"><span class="task-label">Eat</span></label>
                         </div>
 
                         <div class="task">
-                            <input type="checkbox" name="task-2" id="task-2">
-                            <label for="task-2">Sleep</label>
+                            <input type="checkbox" class="checkbox" name="task-2" id="task-2">
+                            <label for="task-2" class="custom-checkbox"><span class="task-label">Sleep</span></label>
                         </div>
 
                         <div class="task">
-                            <input type="checkbox" name="task-3" id="task-3">
-                            <label for="task-3">Code</label>
-                        </div>
-
+                            <input type="checkbox" class="checkbox" name="task-3" id="task-3">
+                            <label for="task-3" class="custom-checkbox"><span class="task-label">Code</span></label>
+                        
                         <div class="task">
-                            <input type="checkbox" name="task-4" id="task-4">
-                            <label for="task-4">Repeat</label>
+                            <input type="checkbox" class="checkbox" name="task-4" id="task-4">
+                            <label for="task-4" class="custom-checkbox"><span class="task-label">Repeat</span></label>
                         </div>
                     </div>
 
                     <div class="new-task-create">
-                        <input type="text" class="new-task" name="new-task" id="new-task" placeholder="Write new task..." aria-label="Write new task">
+                        <input type="text" class="new-task" name="new-task" id="new-task" placeholder="New task..." aria-label="Write new task">
                         <button class="btn-add-task" aria-label="Add new task"><i class="fa-solid fa-plus"></i></button>
                     </div>
 
@@ -76,7 +75,7 @@
             <section class="timer">
                 <div class="timer-header">
                     <h2 class="timer-title">Active task:</h2>
-                    <input type="text" class="active-task" name="active-task" id="active-task" placeholder="Write active task..." aria-label="Write active task" >
+                    <input type="text" class="active-task" name="active-task" id="active-task" placeholder="Active task..." aria-label="Write active task" >
                 </div>
 
                 <div class="timer-body">
