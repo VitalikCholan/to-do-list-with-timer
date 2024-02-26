@@ -5,11 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do list with timer</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/94d4b51bbe.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        
+        <h1 class="title">Timely Tasks: A Timer-Integrated To-Do List</h1>
     </header>
+
+    <main>
+        <div class="container">
+            <section class="lists">
+                <h2 class="lists-title">My Lists</h2>
+
+                <ul class="lists-names">
+                    <li class="list-name active-list">Daily routine</li>
+                    <li class="list-name">Relax</li>
+                    <li class="list-name">Hobby</li>
+                </ul>
+
+                <form action="">
+                    <input type="text" class="new-list" name="new-list" id="new-list" placeholder="Write new list..." aria-label="Write new list for tasks">
+                    <button class="btn-add-list" aria-label="Add new list">+</button>
+                </form>
+            </section>
+
+            <section class="tasks">
+                <div class="tasks-header">
+                    <h2 class="tasks-title">Work</h2>
+                    <p class="task-count">4 tasks remaining</p>
+                </div>
+
+                <div class="tasks-body">
+                    <div class="tasks-names">
+                        <div class="task">
+                            <input type="checkbox" name="task-1" id="task-1">
+                            <label for="task-1">Eat</label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" name="task-2" id="task-2">
+                            <label for="task-2">Sleep</label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" name="task-3" id="task-3">
+                            <label for="task-3">Code</label>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox" name="task-4" id="task-4">
+                            <label for="task-4">Repeat</label>
+                        </div>
+                    </div>
+
+                    <div class="new-task-create">
+                        <input type="text" class="new-task" name="new-task" id="new-task" placeholder="Write new task..." aria-label="Write new task">
+                        <button class="btn-add-task" aria-label="Add new task">+</button>
+                    </div>
+
+                    <div class="delete-tasks">
+                        <button class="btn-delete-tasks">Clear completed task</button>
+                        <button class="btn-delete-list">Delete list</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="timer">
+                <div class="timer-header">
+                    <h2 class="timer-title">Active task:</h2>
+                    <input type="text" class="active-task" name="active-task" id="active-task" placeholder="Write active task..." aria-label="Write active task" >
+                </div>
+
+                <div class="timer-body">
+                    <p class="timer-numbers">00:00:00</p>
+
+                    <div class="buttons">
+                        <button class="startStopBtn"><i class="fa-solid fa-play"></i></button>
+                        <button class="resetBtn"><i class="fa-solid fa-rotate"></i></button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
 
     <script src="js/script.js"></script>
 </body>
