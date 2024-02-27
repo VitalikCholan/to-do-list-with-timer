@@ -25,7 +25,7 @@ body {
     grid-template-areas: 
     ". lists tasks ."
     ". timer timer .";
-    margin: 0 2em 3em;
+    margin: 0 2em 2em;
     row-gap: 50px;
 }
 
@@ -127,6 +127,7 @@ form {
 .task-count {
     align-self: center;
     font-size: 1.2rem;
+    margin-left: 1.5em;
 }
 
 .tasks-body {
@@ -325,4 +326,35 @@ form {
     border: none;
     font-size: 1.8rem;
     cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(10px, 1fr));
+        grid-template-areas: 
+        "lists"
+        "tasks"
+        "timer";
+        row-gap: 0px;
+    }
+
+    .title {
+        margin: 0.5em 0.8em 0.3em; 
+    }
+
+    .lists {
+        justify-self: center;
+        margin-bottom: 2em;
+    }
+
+    .lists-title {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .tasks {
+        margin-bottom: 3em;
+    }
 }
