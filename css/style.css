@@ -25,7 +25,8 @@ body {
     grid-template-areas: 
     ". lists tasks ."
     ". timer timer .";
-    margin-bottom: 3em;
+    margin: 0 2em 3em;
+    row-gap: 50px;
 }
 
 .lists {
@@ -267,3 +268,61 @@ form {
     grid-area: timer;
 }
 
+.timer-header {
+    background-color: #481a00;
+    color: #ffc71b;
+    border: 1px solid #481a00;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+}
+
+.timer-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.active-task {
+    margin: 0 auto;
+    font-size: 1rem;
+    background-color: #ffc71b;
+    border: none;
+    outline: none;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.active-task:focus::placeholder {
+    opacity: 0.5;
+}
+
+.timer-body {
+    background-color: #6F2B00;
+    color: #ffda46;
+    border: 1px solid #6F2B00;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+}
+
+.timer-numbers {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 0.3em;
+    margin-bottom: 0.1em;
+}
+
+.timer-btn {
+    text-align: center;
+    padding: 0.5em;
+}
+
+.timer-btn button {
+    background-color: #451B00;
+    padding: 0.5em;
+    margin: 0 0.5em;
+    color: currentColor;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
