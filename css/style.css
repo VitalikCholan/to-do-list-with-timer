@@ -55,6 +55,18 @@ body {
 
 .active-list {
     font-weight: 600;
+    position: relative;
+    list-style: none;
+}
+
+.active-list::before {
+    content: "●";
+    display: inline-block;
+    width: 1em;
+    text-align: center;
+    position: absolute;
+    left: -29.8px;
+    top: -1px;
 }
 
 form {
@@ -118,7 +130,137 @@ form {
 
 .tasks-body {
     background-color: #ffc71b;
-    padding: 2em;
+    padding: 1.5em;
+    position: relative;
+}
+
+
+.task {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.task::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: currentColor;
+    opacity: 0.5;
+}
+
+.task label {
+    font-size: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.task label::after {
+    content: "";
+    position: absolute;
+    left: 1.5em;
+    right: 0;
+    top: 50%;
+    height: 3px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms ease-in-out;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox:checked + label::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.custom-checkbox {
+    display: inline-block;
+    width: 0.75em;
+    height: 0.75em;
+    cursor: pointer;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
+}
+
+.task:hover .custom-checkbox {
+    transform: scale(1.2);
+} 
+
+.checkbox:checked + label .custom-checkbox {
+    background-color: currentColor;
+    box-shadow: 0 0 0px 3px #ffc71b inset;
+}
+
+.checkbox:checked + label {
+    opacity: 0.5;
+}
+
+.new-task-create {
+    display: flex;
+}
+
+.new-task {
+    order: 2;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid currentColor;
+    font-size: 1rem;
+    outline: none;
+    transition: border-bottom 300ms ease-out;
+}
+
+.new-task:focus {
+    border-bottom: 3px solid currentColor;
+}
+
+.new-task:focus::placeholder {
+    opacity: 0.5;
+}
+
+.btn-add-task {
+    background-color: inherit;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 0.5em;
+    transition: opacity 300ms ease-in;
+}
+
+.btn-add-task:hover {
+    opacity: 0.7;
+}
+
+.delete-tasks {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left: 0px;
+    bottom: -35px;
+    width: 100%;
+}
+
+.delete-tasks button {
+    background-color: inherit;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+}
+
+.delete-tasks button:hover {
+    cursor: pointer;
+    opacity: 0.5;
 }
 
 .timer {
