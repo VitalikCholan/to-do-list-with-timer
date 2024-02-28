@@ -29,7 +29,7 @@ body {
     row-gap: 50px;
 }
 
-.lists {
+.lists-box {
     grid-area: lists;
 }
 
@@ -106,7 +106,7 @@ form {
     opacity: 0.7;
 }
 
-.tasks {
+.tasks-box {
     grid-area: tasks;
 }
 
@@ -124,7 +124,7 @@ form {
     letter-spacing: 2px;
 }
 
-.task-count {
+.tasks-count {
     align-self: center;
     font-size: 1.2rem;
     margin-left: 1.5em;
@@ -265,7 +265,7 @@ form {
     opacity: 0.5;
 }
 
-.timer {
+.timer-box {
     grid-area: timer;
 }
 
@@ -350,7 +350,7 @@ form {
         margin: 0.5em 0.8em 0.3em; 
     }
 
-    .lists {
+    .lists-box {
         justify-self: center;
         margin-bottom: 2em;
     }
@@ -360,7 +360,7 @@ form {
         margin-top: 0;
     }
 
-    .tasks {
+    .tasks-box {
         margin-bottom: 3em;
     }
 }

@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/94d4b51bbe.js" crossorigin="anonymous"></script>
+    <script defer src="js/script.js"></script>
 </head>
 <body>
     <header>
@@ -17,25 +18,25 @@
 
     <main>
         <div class="container">
-            <section class="lists">
+            <section class="lists-box">
                 <h2 class="lists-title">My Lists</h2>
 
                 <ul class="lists-names">
-                    <li class="list-name active-list">Daily routine</li>
+                    <!-- <li class="list-name active-list">Daily routine</li>
                     <li class="list-name">Relax</li>
-                    <li class="list-name">Hobby</li>
+                    <li class="list-name">Hobby</li> -->
                 </ul>
 
-                <form action="">
+                <form action="" class="add-list">
                     <input type="text" class="new-list" name="new-list" id="new-list" placeholder="New list..." aria-label="Write new list for tasks">
                     <button class="btn-add-list" aria-label="Add new list"><i class="fa-solid fa-plus"></i></button>
                 </form>
             </section>
 
-            <section class="tasks">
+            <section class="tasks-box">
                 <div class="tasks-header">
                     <h2 class="tasks-title">Daily routine</h2>
-                    <p class="task-count">4 tasks remaining</p>
+                    <p class="tasks-count">4 tasks remaining</p>
                 </div>
 
                 <div class="tasks-body">
@@ -67,13 +68,13 @@
                     </div>
 
                     <div class="delete-tasks">
-                        <button class="btn-delete-tasks">Clear completed task</button>
+                        <button class="btn-delete-task">Clear completed task</button>
                         <button class="btn-delete-list">Delete list</button>
                     </div>
                 </div>
             </section>
 
-            <section class="timer">
+            <section class="timer-box">
                 <div class="timer-header">
                     <h2 class="timer-title">Active task:</h2>
                     <input type="text" class="active-task" name="active-task" id="active-task" placeholder="Active task..." aria-label="Write active task" >
@@ -90,7 +91,5 @@
             </section>
         </div>
     </main>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
