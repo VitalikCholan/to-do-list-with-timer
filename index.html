@@ -21,11 +21,7 @@
             <section class="lists-box">
                 <h2 class="lists-title">My Lists</h2>
 
-                <ul class="lists-names">
-                    <!-- <li class="list-name active-list">Daily routine</li>
-                    <li class="list-name">Relax</li>
-                    <li class="list-name">Hobby</li> -->
-                </ul>
+                <ul class="lists-names"></ul>
 
                 <form action="" class="add-list">
                     <input type="text" class="new-list" name="new-list" id="new-list" placeholder="New list..." aria-label="Write new list for tasks">
@@ -35,36 +31,18 @@
 
             <section class="tasks-box">
                 <div class="tasks-header">
-                    <h2 class="tasks-title">Daily routine</h2>
-                    <p class="tasks-count">4 tasks remaining</p>
+                    <h2 class="tasks-title"></h2>
+                    <p class="tasks-count"></p>
                 </div>
 
                 <div class="tasks-body">
-                    <div class="tasks-names">
-                        <div class="task">
-                            <input type="checkbox" class="checkbox" name="task-1" id="task-1">
-                            <label for="task-1"><span class="custom-checkbox"></span>Eat</label>
-                        </div>
-
-                        <div class="task">
-                            <input type="checkbox" class="checkbox" name="task-2" id="task-2">
-                            <label for="task-2"><span class="custom-checkbox"></span>Sleep</label>
-                        </div>
-
-                        <div class="task">
-                            <input type="checkbox" class="checkbox" name="task-3" id="task-3">
-                            <label for="task-3"><span class="custom-checkbox"></span>Code</label>
-                        </div>
-                        
-                        <div class="task">
-                            <input type="checkbox" class="checkbox" name="task-4" id="task-4">
-                            <label for="task-4""><span class="custom-checkbox"></span>Repeat</label>
-                        </div>
-                    </div>
+                    <div class="tasks-names"></div>
 
                     <div class="new-task-create">
-                        <input type="text" class="new-task" name="new-task" id="new-task" placeholder="New task..." aria-label="Write new task">
-                        <button class="btn-add-task" aria-label="Add new task"><i class="fa-solid fa-plus"></i></button>
+                        <form action="" class="add-task">
+                            <input type="text" class="new-task" name="new-task" id="new-task" placeholder="New task..." aria-label="Write new task">
+                            <button class="btn-add-task" aria-label="Add new task"><i class="fa-solid fa-plus"></i></button>
+                        </form>
                     </div>
 
                     <div class="delete-tasks">
@@ -90,6 +68,13 @@
                 </div>
             </section>
         </div>
+
+        <template id="task-template">
+            <div class="task">
+                <input type="checkbox" class="checkbox">
+                <label><span class="custom-checkbox"></span></label>
+            </div>
+        </template>
     </main>
 </body>
 </html>
