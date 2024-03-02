@@ -146,3 +146,4 @@ function clearElement(element) {
 }
 
 render();
+
