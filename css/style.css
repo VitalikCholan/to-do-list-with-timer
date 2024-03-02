@@ -270,8 +270,8 @@ form {
 }
 
 .timer-header {
-    background-color: #481a00;
-    color: #ffc71b;
+    background-color: #FFDA46;
+    color: #481A00;
     border: 1px solid #481a00;
     display: flex;
     flex-direction: column;
@@ -286,20 +286,32 @@ form {
 .active-task {
     margin: 0 auto;
     font-size: 1rem;
-    background-color: #ffc71b;
+    background-color: #481A00;
+    color: #FFA500;
     border: none;
     outline: none;
     padding: 0.5em;
     text-align: center;
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
+}
+
+.active-task:focus {
+    transform: scale(1.1);
+}
+
+.active-task::placeholder {
+    color: #FFA500;
 }
 
 .active-task:focus::placeholder {
     opacity: 0.5;
+    color: #FFDA46;
 }
 
 .timer-body {
-    background-color: #6F2B00;
-    color: #ffda46;
+    background-color: #ffc71b;
+    color: #6F2B00;
     border: 1px solid #6F2B00;
     display: flex;
     flex-direction: column;
@@ -319,10 +331,10 @@ form {
 }
 
 .timer-btn button {
-    background-color: #451B00;
+    background-color: #481A00;
     padding: 0.5em;
     margin: 0 0.5em;
-    color: currentColor;
+    color: #FFA500;
     border: none;
     font-size: 1.8rem;
     cursor: pointer;

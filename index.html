@@ -36,7 +36,14 @@
                 </div>
 
                 <div class="tasks-body">
-                    <div class="tasks-names"></div>
+                    <div class="tasks-names">
+                        <template id="task-template">
+                            <div class="task">
+                                <input type="checkbox" class="checkbox">
+                                <label><span class="custom-checkbox"></span></label>
+                            </div>
+                        </template>
+                    </div>
 
                     <div class="new-task-create">
                         <form action="" class="add-task">
@@ -68,13 +75,6 @@
                 </div>
             </section>
         </div>
-
-        <template id="task-template">
-            <div class="task">
-                <input type="checkbox" class="checkbox">
-                <label><span class="custom-checkbox"></span></label>
-            </div>
-        </template>
     </main>
 </body>
 </html>
