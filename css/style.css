@@ -270,7 +270,7 @@ form {
 }
 
 .timer-header {
-    background-color: #FFDA46;
+    background-color: #ffc71b;
     color: #481A00;
     border: 1px solid #481a00;
     display: flex;
@@ -285,7 +285,7 @@ form {
 
 .active-task {
     margin: 0 auto;
-    font-size: 1rem;
+    font-size: 1.2rem;
     background-color: #481A00;
     color: #FFA500;
     border: none;
@@ -310,7 +310,7 @@ form {
 }
 
 .timer-body {
-    background-color: #ffc71b;
+    background-color: #FFDA46;
     color: #6F2B00;
     border: 1px solid #6F2B00;
     display: flex;
@@ -334,6 +334,7 @@ form {
     background-color: #481A00;
     padding: 0.5em;
     margin: 0 0.5em;
+    width: 2em;
     color: #FFA500;
     border: none;
     font-size: 1.8rem;
