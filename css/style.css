@@ -359,6 +359,7 @@ form {
     display: inline-flex;
     align-items: center;
     opacity: 0;
+    min-width: 400px;
 }
 
 .alert .fa-circle-exclamation {
@@ -371,6 +372,7 @@ form {
     color: #7c360b;
     font-size: 1.2rem;
     text-align: center;
+    margin: 0 0.5em;
 }
 
 .alert .close-btn {    
@@ -402,7 +404,7 @@ form {
     0% {
         transform: translateY(-100%);
         transform: translateX(-50%);
-        top: -60px;
+        top: -150px;
     } 
 
     100% {
@@ -426,7 +428,7 @@ form {
     100% {
         transform: translateY(-100%);
         transform: translateX(-50%);
-        top: -60px;
+        top: -150px;
     }
 }
 
