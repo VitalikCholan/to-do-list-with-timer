@@ -29,5 +29,4 @@ Contributions to the project are welcome. If you have any suggestions, bug fixes
 - Font Awesome for providing the icons used in the application.
 - The Poppins font family from Google Fonts for the typography used in the application.
 
-## Author
-Cholan Vitaliy - [My GitHub Profile](https://github.com/VitalikCholan)
+

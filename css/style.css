@@ -347,6 +347,89 @@ form {
     transform: scale(1.1);
 }
 
+.alert {
+    background-color: #ffeb85;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid red;
+    border-radius: 5px;
+    border-left: 10px solid #e27c00;
+    display: inline-flex;
+    align-items: center;
+    opacity: 0;
+}
+
+.alert .fa-circle-exclamation {
+    color: #ce8500; 
+    font-size: 1.4rem;   
+    margin: 0 0.5em;
+}
+
+.alert .alert-message {
+    color: #7c360b;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.alert .close-btn {    
+    background-color: #ffc71b;
+    padding: 1em 0.8em;
+    margin-left: 1em;
+    transition: background-color 200ms ease-in-out;
+}
+
+.alert .close-btn:hover {
+    background-color: #ffda46;
+}
+
+.alert .fa-square-xmark {
+    color: #ce8500;
+    font-size: 1.4rem; 
+    cursor: pointer;
+}
+
+.alert.showAlert {
+    opacity: 1;
+}
+
+.alert.show {
+    animation: show 1s ease-in-out forwards;
+}
+
+@keyframes show {
+    0% {
+        transform: translateY(-100%);
+        transform: translateX(-50%);
+        top: -60px;
+    } 
+
+    100% {
+        transform: translateY(0);
+        transform: translateX(-50%);
+        top: 20px;
+    }
+}
+
+.alert.hide {
+    animation: hide 1s ease-in-out forwards;
+}
+
+@keyframes hide {
+    0% {
+        transform: translateY(0);
+        transform: translateX(-50%);
+        top: 20px;
+    } 
+
+    100% {
+        transform: translateY(-100%);
+        transform: translateX(-50%);
+        top: -60px;
+    }
+}
+
 @media screen and (max-width: 720px) {
     .container {
         display: grid;

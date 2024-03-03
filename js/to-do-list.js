@@ -37,13 +37,13 @@ tasksNames.addEventListener('click', e => {
     }
 })
 
-deleteList.addEventListener('click', e => {
+deleteList.addEventListener('click', () => {
     lists = lists.filter(list => list.id !== selectedListId);
     selectedListId = null;
     saveAndRender();
 })
 
-deleteTask.addEventListener('click', e => {
+deleteTask.addEventListener('click', () => {
     const selectedList = lists.find(list => list.id === selectedListId);
     selectedList.tasks = selectedList.tasks.filter(task => !task.complete);
     saveAndRender();

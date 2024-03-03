@@ -41,27 +41,45 @@ function timer() {
     timerNumbers.innerText = `${leadingHours}:${leadingMinutes}:${leadingSeconds}`;
 }
 
-startStopBtn.addEventListener('click', () => {
-    if(activeTask.value.trim() === '') {
-        return alert("Please enter an active task before starting the timer.");
-    }
+const alertBox = document.querySelector('.alert');
+const closeBtn = document.querySelector('.close-btn');
 
+startStopBtn.addEventListener('click', () => {
     if(timerStatus === 'stopped') {
-        timerInterval = window.setInterval(timer, 1000);
+        if(activeTask.value.trim() === '') {
+            alertBox.classList.add('show');
+            alertBox.classList.remove('hide');
+            alertBox.classList.add('showAlert');
+            setTimeout(() => {
+                alertBox.classList.remove('show');
+                alertBox.classList.add('hide');
+            }, 5000);
+            return;        
+        } else {
+            alertBox.classList.remove('show');
+            alertBox.classList.add('hide');
+        }
+
+        timerInterval = setInterval(timer, 1000);
         startStopBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
         timerStatus = 'started';
     } else {
-        window.clearInterval(timerInterval);
+        clearInterval(timerInterval);
         startStopBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
         timerStatus = 'stopped';
     }
 })
 
 resetBtn.addEventListener('click', () => {
-    window.clearInterval(timerInterval);
+    clearInterval(timerInterval);
     seconds = 0;
     minutes = 0;
     hours = 0;
 
     timerNumbers.innerText = '00:00:00';
+})
+
+closeBtn.addEventListener('click', () => {
+    alertBox.classList.remove('show');
+    alertBox.classList.add('hide');
 })
