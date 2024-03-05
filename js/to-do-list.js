@@ -145,5 +145,55 @@ function clearElement(element) {
     }
 }
 
+// Drag and drop for tasks
+
+let draggedTaskId = null;
+
+tasksNames.addEventListener('dragstart', e => {
+        const taskElement = e.target.closest('.task');
+        taskElement.classList.add('dragging');
+        draggedTaskId = taskElement.id;    
+})
+
+tasksNames.addEventListener('dragend', e => {
+    const taskElement = e.target.closest('.task');
+    taskElement.classList.remove('dragging');
+    draggedTaskId = null;
+    saveTaskOrder(); 
+})
+
+tasksNames.addEventListener('dragover', e => {
+    e.preventDefault();
+    const afterElement = getDragAfterElement(tasksNames, e.clientY);
+    const draggable = document.querySelector('.dragging');
+    if (afterElement === null) {
+        tasksNames.appendChild(draggable);
+    } else {
+        tasksNames.insertBefore(draggable, afterElement);
+    }
+})
+
+function getDragAfterElement(container, y) {
+    const draggableElements = [...container.querySelectorAll('.task:not(.dragging)')];
+    return draggableElements.reduce((closest, child) => {
+        const box = child.getBoundingClientRect();
+        const offset = y - box.top - box.height / 2;
+        if (offset < 0 && offset > closest.offset) {
+            return { offset: offset, element: child };
+        } else {
+            return closest;
+        }
+    }, { offset: Number.NEGATIVE_INFINITY }).element; 
+}
+
+function saveTaskOrder() {
+    const selectedList = lists.find(list => list.id === selectedListId);
+    const taskOrder = Array.from(tasksNames.children).map(child => child.querySelector('input').id);
+    selectedList.tasks = selectedList.tasks.sort((a, b) => {
+        return taskOrder.indexOf(a.id) - taskOrder.indexOf(b.id);
+    });
+    save(); 
+}
+
 render();
 
