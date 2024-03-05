@@ -1,3 +1,5 @@
+export function timerToDo() {
+
 const activeTask = document.querySelector('.active-task');
 const timerNumbers = document.querySelector('.timer-numbers');
 const startStopBtn = document.querySelector('.startStopBtn');
@@ -83,3 +85,5 @@ closeBtn.addEventListener('click', () => {
     alertBox.classList.remove('show');
     alertBox.classList.add('hide');
 })
+
+}

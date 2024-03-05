@@ -1,3 +1,5 @@
+export function todoLIst() {
+
 // For lists
 const listsNames = document.querySelector('.lists-names');
 const addList = document.querySelector('.add-list');
@@ -145,8 +147,6 @@ function clearElement(element) {
     }
 }
 
-// Drag and drop for tasks
-
 let draggedTaskId = null;
 
 tasksNames.addEventListener('dragstart', e => {
@@ -197,3 +197,4 @@ function saveTaskOrder() {
 
 render();
 
+}
