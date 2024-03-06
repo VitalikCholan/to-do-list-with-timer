@@ -90,6 +90,7 @@ form {
 
 .new-list:focus::placeholder {
     opacity: 0.5;
+    background-color: #FFA500;
 }
 
 .btn-add-list {
