@@ -1,0 +1,16 @@
+{
+  "name": "to-do-list-with-timer",
+  "version": "1.0.0",
+  "description": "Timely Tasks is a web application that combines a to-do list with a timer, allowing users to organize their tasks efficiently while keeping track of time spent on each task.",
+  "main": "index.js",
+  "scripts": {
+    "test:chrome": "npx playwright test --headed --browser=chromium",
+    "test:firefox": "npx playwright test --headed --browser=firefox",
+    "test:safari": "npx playwright test --headed --browser=webkit"
+  },
+  "author": "Cholan Vitaliy",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.43.1"
+  }
+}
