@@ -1,89 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-do list with timer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/94d4b51bbe.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/94d4b51bbe.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <header>
-        <h1 class="title">Timely Tasks: A Timer-Integrated To-Do List</h1>
+      <h1 class="title">Timely Tasks: A Timer-Integrated To-Do List</h1>
     </header>
 
     <main>
-        <div class="container">
-            <section class="lists-box">
-                <h2 class="lists-title">My Lists</h2>
+      <div class="container">
+        <section class="lists-box">
+          <h2 class="lists-title">My Lists</h2>
 
-                <ul class="lists-names"></ul>
+          <ul class="lists-names"></ul>
 
-                <form action="" class="add-list">
-                    <input type="text" class="new-list" name="new-list" id="new-list" placeholder="New list..." aria-label="Write new list for tasks" autocomplete="off">
-                    <button class="btn-add-list" aria-label="Add new list"><i class="fa-solid fa-plus"></i></button>
-                </form>
-            </section>
+          <form action="" class="add-list">
+            <input
+              type="text"
+              class="new-list"
+              name="new-list"
+              id="new-list"
+              placeholder="New list..."
+              aria-label="Write new list for tasks"
+              autocomplete="off"
+            />
+            <button class="btn-add-list" aria-label="Add new list">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </form>
+        </section>
 
-            <section class="tasks-box">
-                <div class="tasks-header">
-                    <h2 class="tasks-title"></h2>
-                    <p class="tasks-count"></p>
+        <section class="tasks-box">
+          <div class="tasks-header">
+            <h2 class="tasks-title"></h2>
+            <p class="tasks-count"></p>
+          </div>
+
+          <div class="tasks-body">
+            <div class="tasks-names">
+              <template id="task-template">
+                <div class="task" draggable="true">
+                  <input type="checkbox" class="checkbox" />
+                  <label><span class="custom-checkbox"></span></label>
                 </div>
+              </template>
+            </div>
 
-                <div class="tasks-body">
-                    <div class="tasks-names">
-                        <template id="task-template">
-                            <div class="task" draggable="true">
-                                <input type="checkbox" class="checkbox">
-                                <label><span class="custom-checkbox"></span></label>
-                            </div>
-                        </template>
-                    </div>
+            <div class="new-task-create">
+              <form action="" class="add-task">
+                <input
+                  type="text"
+                  class="new-task"
+                  name="new-task"
+                  id="new-task"
+                  placeholder="New task..."
+                  aria-label="Write new task"
+                  autocomplete="off"
+                />
+                <button class="btn-add-task" aria-label="Add new task">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </form>
+            </div>
 
-                    <div class="new-task-create">
-                        <form action="" class="add-task">
-                            <input type="text" class="new-task" name="new-task" id="new-task" placeholder="New task..." aria-label="Write new task" autocomplete="off">
-                            <button class="btn-add-task" aria-label="Add new task"><i class="fa-solid fa-plus"></i></button>
-                        </form>
-                    </div>
+            <div class="delete-tasks">
+              <button class="btn-delete-task">Clear completed task</button>
+              <button class="btn-delete-list">Delete list</button>
+            </div>
+          </div>
+        </section>
 
-                    <div class="delete-tasks">
-                        <button class="btn-delete-task">Clear completed task</button>
-                        <button class="btn-delete-list">Delete list</button>
-                    </div>
-                </div>
-            </section>
+        <section class="timer-box">
+          <div class="timer-header">
+            <h2 class="timer-title">Active task:</h2>
+            <input
+              type="text"
+              class="active-task"
+              name="active-task"
+              id="active-task"
+              placeholder="Active task..."
+              aria-label="Write active task"
+              autocomplete="off"
+            />
+          </div>
 
-            <section class="timer-box">
-                <div class="timer-header">
-                    <h2 class="timer-title">Active task:</h2>
-                    <input type="text" class="active-task" name="active-task" id="active-task" placeholder="Active task..." aria-label="Write active task" autocomplete="off">
-                </div>
+          <div class="timer-body">
+            <p class="timer-numbers">00:00:00</p>
 
-                <div class="timer-body">
-                    <p class="timer-numbers">00:00:00</p>
+            <div class="timer-btn">
+              <button class="startStopBtn">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <button class="resetBtn">
+                <i class="fa-solid fa-rotate"></i>
+              </button>
+            </div>
+          </div>
 
-                    <div class="timer-btn">
-                        <button class="startStopBtn"><i class="fa-solid fa-play"></i></button>
-                        <button class="resetBtn"><i class="fa-solid fa-rotate"></i></button>
-                    </div>
-                </div>
-
-                <div class="alert hide">
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    <span class="alert-message">Please enter an active task before starting the timer.</span>
-                    <span class="close-btn">
-                        <i class="fa-solid fa-square-xmark"></i>
-                    </span>
-                </div>
-            </section>
-        </div>
+          <div class="alert hide">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span class="alert-message"
+              >Please enter an active task before starting the timer.</span
+            >
+            <span class="close-btn">
+              <i class="fa-solid fa-square-xmark"></i>
+            </span>
+          </div>
+        </section>
+      </div>
     </main>
 
-    <script type="module" src="js/main.js"></script>
-</body>
+    <script src="js/to-do-list.js"></script>
+    <script src="js/timer.js"></script>
+  </body>
 </html>
