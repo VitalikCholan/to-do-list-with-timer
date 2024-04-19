@@ -153,6 +153,39 @@ function clearElement(element) {
 
 let draggedTaskId = null;
 
+tasksNames.addEventListener('pointerdown', (e) => {
+  if (e.button !== 0) return;
+  const taskElement = e.target.closest('.task');
+  if (!taskElement) return;
+  taskElement.classList.add('dragging');
+  draggedTaskId = taskElement.id;
+});
+
+tasksNames.addEventListener('pointerup', (e) => {
+  if (e.button !== 0) return;
+  const taskElement = e.target.closest('.task');
+  if (!taskElement) return;
+  taskElement.classList.remove('dragging');
+  draggedTaskId = null;
+  saveTaskOrder();
+});
+
+tasksNames.addEventListener('pointerover', (e) => {
+  if (!draggedTaskId) return;
+  e.preventDefault();
+  const afterElement = getDragAfterElement(tasksNames, e.clientY);
+  const draggable = document.querySelector('.dragging');
+  if (afterElement === null) {
+    tasksNames.appendChild(draggable);
+  } else {
+    tasksNames.insertBefore(draggable, afterElement);
+  }
+});
+
+document.addEventListener('selectstart', (e) => {
+  if (e.target.classList.contains('dragging')) e.preventDefault();
+});
+
 tasksNames.addEventListener('dragstart', (e) => {
   const taskElement = e.target.closest('.task');
   taskElement.classList.add('dragging');
