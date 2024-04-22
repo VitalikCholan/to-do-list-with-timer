@@ -79,6 +79,7 @@ form {
   background-color: inherit;
   border: none;
   border-bottom: 1px solid #000000;
+  color: #000000;
   font-size: 1rem;
   outline: none;
   transition: border-bottom 300ms ease-out;
@@ -95,6 +96,7 @@ form {
 
 .btn-add-list {
   background-color: inherit;
+  color: #000000;
   border: none;
   font-size: 2rem;
   cursor: pointer;
@@ -140,6 +142,7 @@ form {
 }
 
 .task {
+  padding: 0 0.2em;
   position: relative;
   margin-bottom: 1em;
 }
@@ -239,6 +242,7 @@ form {
 
 .btn-add-task {
   background-color: inherit;
+  color: #000000;
   border: none;
   font-size: 2rem;
   cursor: pointer;
@@ -262,6 +266,7 @@ form {
 
 .delete-tasks button {
   background-color: inherit;
+  color: #000000;
   font-size: clamp(1rem, 0.9055rem + 0.3926vw, 1.2rem);
   font-weight: 600;
   border: none;
@@ -478,5 +483,11 @@ form {
 
   .tasks-box {
     margin-bottom: 3em;
+  }
+}
+
+@media (hover: none) {
+  .task.dragging {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 }
