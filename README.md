@@ -6,9 +6,21 @@ Timely Tasks is a web application that combines a to-do list with a timer, allow
 
 🔗 **Live Demo:** [Timely Tasks](https://vitalikcholan.github.io/to-do-list-with-timer/)
 
+## Preview:
+
+<img src="screenshots/to_do_1.png" alt="Timely Tasks" width="700px">
+
+<img src="screenshots/to_do_2.png" alt="Timely Tasks" width="700px">
+
+<div style="display: flex; gap: 50px;">
+  <img src="screenshots/to_do_3.png" alt="Timely Tasks" width="300px">
+  <img src="screenshots/to_do_4.png" alt="Timely Tasks" width="300px">
+</div>
+
 ## Features
 
 - To-Do List Management: Users can create multiple to-do lists, add tasks to each list, mark tasks as complete, and delete tasks and lists as needed.
+- Local Storage: The application uses local storage to save the lists and tasks.
 - Drag and Drop: Tasks can be reordered within a list using drag and drop functionality.
 - Timer Integration: The application includes a timer feature that allows users to track the time spent on a specific task. Users can start, pause, reset the timer, and enter an active task name before starting the timer.
 - Alerts: Users are notified if they attempt to start the timer without an active task.
@@ -48,6 +60,10 @@ Timely Tasks is a web application that combines a to-do list with a timer, allow
 6. Drag and Drop Tasks:
 
 - Tasks can be reordered within a list by dragging and dropping them.
+
+## Deployment
+
+The project is deployed on Github Pages. [Timely Tasks](https://vitalikcholan.github.io/to-do-list-with-timer/)
 
 ## Contributing
 
